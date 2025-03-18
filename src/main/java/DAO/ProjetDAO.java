@@ -1,7 +1,7 @@
 package DAO;
 
 import Model.Project; // Adjusted to match earlier code
-import Util.DBConnection;
+import Util.DBConnection; // Adjusted to match earlier code
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,8 +36,28 @@ public class ProjetDAO {
         return -1; // Return -1 if insertion fails
     }
 
-
-
+    // Get all projects
+    public List<Project> getAllProjets() {
+        List<Project> projets = new ArrayList<>();
+        String sql = "SELECT * FROM projet";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                Project projet = new Project();
+                projet.setId(rs.getInt("id"));
+                projet.setNom(rs.getString("nom"));
+                projet.setDescription(rs.getString("description"));
+                projet.setDateDebut(rs.getDate("date_debut"));
+                projet.setDateFin(rs.getDate("date_fin"));
+                projet.setBudget(rs.getDouble("budget"));
+                projets.add(projet);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error getting projects: " + e.getMessage());
+        }
+        return projets; // Return the list of projects
+    }
 
 
 }
