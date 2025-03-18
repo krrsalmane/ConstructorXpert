@@ -8,12 +8,9 @@ public class DBConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "Root@123";
 
-
     public static Connection getConnection() {
         try {
-
             Class.forName("com.mysql.cj.jdbc.Driver");
-
             Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
             return connection;
         } catch (Exception e) {
