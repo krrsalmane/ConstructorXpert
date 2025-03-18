@@ -1,7 +1,7 @@
 package DAO;
 
-import Model.Project; // Adjusted to match earlier code
-import Util.DBConnection; // Adjusted to match earlier code
+import Model.Project; // Adjusted to match your package
+import Util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,15 +25,14 @@ public class ProjetDAO {
             stmt.executeUpdate();
             System.out.println("Project added: " + projet.getNom());
 
-            // Get the generated ID
             ResultSet rs = stmt.getGeneratedKeys();
             if (rs.next()) {
-                return rs.getInt(1); // Return the new project's ID
+                return rs.getInt(1);
             }
         } catch (SQLException e) {
             System.out.println("Error adding project: " + e.getMessage());
         }
-        return -1; // Return -1 if insertion fails
+        return -1;
     }
 
     // Get all projects
@@ -56,8 +55,27 @@ public class ProjetDAO {
         } catch (SQLException e) {
             System.out.println("Error getting projects: " + e.getMessage());
         }
-        return projets; // Return the list of projects
+        return projets;
+    }
+
+    // Update a project
+    public void updateProjet(Project projet) {
+        String sql = "UPDATE projet SET nom = ?, description = ?, date_debut = ?, date_fin = ?, budget = ? WHERE id = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, projet.getNom());
+            stmt.setString(2, projet.getDescription());
+            stmt.setDate(3, new java.sql.Date(projet.getDateDebut().getTime()));
+            stmt.setDate(4, new java.sql.Date(projet.getDateFin().getTime()));
+            stmt.setDouble(5, projet.getBudget());
+            stmt.setInt(6, projet.getId());
+            stmt.executeUpdate();
+            System.out.println("Project updated: " + projet.getNom());
+        } catch (SQLException e) {
+            System.out.println("Error updating project: " + e.getMessage());
+        }
     }
 
 
+    }
 }
