@@ -25,5 +25,28 @@ public class TacheDAO {
     }
 
 
+    public List<Tache> getTachesByProjetId(int projetId) {
+        List<Tache> taches = new ArrayList<>();
+        String sql = "SELECT * FROM tache WHERE projet_id = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, projetId);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Tache tache = new Tache();
+                tache.setId(rs.getInt("id"));
+                tache.setProjetId(rs.getInt("projet_id"));
+                tache.setDescription(rs.getString("description"));
+                tache.setDateDebut(rs.getDate("date_debut"));
+                tache.setDateFin(rs.getDate("date_fin"));
+                taches.add(tache);
+            }
+        } catch (Exception e) {
+            System.out.println("Error getting tasks: " + e.getMessage());
+        }
+        return taches;
+    }
+
+
 
 }
