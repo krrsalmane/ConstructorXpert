@@ -65,6 +65,15 @@ public class TacheDAO {
     }
 
 
-
+    public void deleteTache(int id) {
+        String sql = "DELETE FROM tache WHERE id = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            System.out.println("Task deleted with ID: " + id);
+        } catch (Exception e) {
+            System.out.println("Error deleting task: " + e.getMessage());
+        }
     }
-
+}
