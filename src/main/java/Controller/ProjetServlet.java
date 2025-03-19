@@ -1,7 +1,5 @@
 package Controller;
-
 import DAO.ProjetDAO;
-import Model.Project;
 import Model.Project;
 import Util.DBConnection;
 import jakarta.servlet.ServletException;
@@ -87,7 +85,6 @@ public class ProjetServlet extends HttpServlet {
         }
     }
 
-    // Helper method to get a project by ID
     private Project getProjetById(int id) {
         String sql = "SELECT * FROM projet WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();

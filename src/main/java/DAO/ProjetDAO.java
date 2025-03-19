@@ -1,6 +1,5 @@
 package DAO;
-
-import Model.Project; // Adjusted to match your package
+import Model.Project;
 import Util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +11,7 @@ import java.util.List;
 
 public class ProjetDAO {
 
-    // Add a new project and return its generated ID
+
     public int addProjet(Project projet) {
         String sql = "INSERT INTO projet (nom, description, date_debut, date_fin, budget) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = DBConnection.getConnection();
@@ -35,7 +34,6 @@ public class ProjetDAO {
         return -1;
     }
 
-    // Get all projects
     public List<Project> getAllProjets() {
         List<Project> projets = new ArrayList<>();
         String sql = "SELECT * FROM projet";
@@ -58,7 +56,6 @@ public class ProjetDAO {
         return projets;
     }
 
-    // Update a project
     public void updateProjet(Project projet) {
         String sql = "UPDATE projet SET nom = ?, description = ?, date_debut = ?, date_fin = ?, budget = ? WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();
@@ -76,7 +73,6 @@ public class ProjetDAO {
         }
     }
 
-    // Delete a project
     public void deleteProjet(int id) {
         String sql = "DELETE FROM projet WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();
