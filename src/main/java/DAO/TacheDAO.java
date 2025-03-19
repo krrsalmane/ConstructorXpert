@@ -48,5 +48,23 @@ public class TacheDAO {
     }
 
 
+    public void updateTache(Tache tache) {
+        String sql = "UPDATE tache SET projet_id = ?, description = ?, date_debut = ?, date_fin = ? WHERE id = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, tache.getProjetId());
+            stmt.setString(2, tache.getDescription());
+            stmt.setDate(3, new java.sql.Date(tache.getDateDebut().getTime()));
+            stmt.setDate(4, new java.sql.Date(tache.getDateFin().getTime()));
+            stmt.setInt(5, tache.getId());
+            stmt.executeUpdate();
+            System.out.println("Task updated: " + tache.getDescription());
+        } catch (Exception e) {
+            System.out.println("Error updating task: " + e.getMessage());
+        }
+    }
 
-}
+
+
+    }
+
