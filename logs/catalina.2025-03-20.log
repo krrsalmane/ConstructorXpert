@@ -1,0 +1,225 @@
+20-Mar-2025 10:49:06.896 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.36
+20-Mar-2025 10:49:06.903 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 13 2025 13:13:30 UTC
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.36.0
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-23
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           23.0.1+11-39
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Mar-2025 10:49:06.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\krr.salmane\IdeaProjects\ConstractorXpert
+20-Mar-2025 10:49:06.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert
+20-Mar-2025 10:49:06.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\temp
+20-Mar-2025 10:49:06.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\logging.properties
+20-Mar-2025 10:49:06.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Mar-2025 10:49:06.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.2.2\lib\idea_rt.jar=54388:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.2.2\bin
+20-Mar-2025 10:49:06.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+20-Mar-2025 10:49:06.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+20-Mar-2025 10:49:06.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+20-Mar-2025 10:49:06.928 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-23\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\krr.salmane\AppData\Local\Microsoft\WindowsApps;C:\Users\krr.salmane\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.1\bin;;.]
+20-Mar-2025 10:49:07.353 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:49:07.378 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [792] milliseconds
+20-Mar-2025 10:49:07.460 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+20-Mar-2025 10:49:07.461 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.36]
+20-Mar-2025 10:49:07.475 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\Catalina\localhost\ConstractorXpert.xml]
+20-Mar-2025 10:49:09.068 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Mar-2025 10:49:09.179 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\Catalina\localhost\ConstractorXpert.xml] has finished in [1,703] ms
+20-Mar-2025 10:49:09.183 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:49:09.211 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1829] milliseconds
+20-Mar-2025 10:54:59.328 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:54:59.340 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+20-Mar-2025 10:54:59.350 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ConstractorXpert] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+20-Mar-2025 10:54:59.350 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ConstractorXpert] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 10:54:59.357 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:54:59.372 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:55:03.945 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.36
+20-Mar-2025 10:55:03.951 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 13 2025 13:13:30 UTC
+20-Mar-2025 10:55:03.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.36.0
+20-Mar-2025 10:55:03.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+20-Mar-2025 10:55:03.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Mar-2025 10:55:03.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Mar-2025 10:55:03.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-23
+20-Mar-2025 10:55:03.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           23.0.1+11-39
+20-Mar-2025 10:55:03.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Mar-2025 10:55:03.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\krr.salmane\IdeaProjects\ConstractorXpert
+20-Mar-2025 10:55:03.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert
+20-Mar-2025 10:55:03.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\temp
+20-Mar-2025 10:55:03.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\logging.properties
+20-Mar-2025 10:55:03.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Mar-2025 10:55:03.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.2.2\lib\idea_rt.jar=55027:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.2.2\bin
+20-Mar-2025 10:55:03.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+20-Mar-2025 10:55:03.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+20-Mar-2025 10:55:03.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+20-Mar-2025 10:55:03.975 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-23\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\krr.salmane\AppData\Local\Microsoft\WindowsApps;C:\Users\krr.salmane\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.1\bin;;.]
+20-Mar-2025 10:55:04.339 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:55:04.361 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [653] milliseconds
+20-Mar-2025 10:55:04.423 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+20-Mar-2025 10:55:04.423 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.36]
+20-Mar-2025 10:55:04.438 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\Catalina\localhost\ConstractorXpert.xml]
+20-Mar-2025 10:55:05.883 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Mar-2025 10:55:05.993 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\Catalina\localhost\ConstractorXpert.xml] has finished in [1,555] ms
+20-Mar-2025 10:55:05.997 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:55:06.019 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1656] milliseconds
+20-Mar-2025 10:56:37.622 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:56:37.633 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+20-Mar-2025 10:56:37.636 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ConstractorXpert] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+20-Mar-2025 10:56:37.637 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ConstractorXpert] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 10:56:37.640 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:56:37.643 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:56:40.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.36
+20-Mar-2025 10:56:40.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 13 2025 13:13:30 UTC
+20-Mar-2025 10:56:40.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.36.0
+20-Mar-2025 10:56:40.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+20-Mar-2025 10:56:40.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Mar-2025 10:56:40.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Mar-2025 10:56:40.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-23
+20-Mar-2025 10:56:40.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           23.0.1+11-39
+20-Mar-2025 10:56:40.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Mar-2025 10:56:40.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\krr.salmane\IdeaProjects\ConstractorXpert
+20-Mar-2025 10:56:40.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1
+20-Mar-2025 10:56:40.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+20-Mar-2025 10:56:40.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+20-Mar-2025 10:56:40.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+20-Mar-2025 10:56:40.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+20-Mar-2025 10:56:40.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+20-Mar-2025 10:56:40.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1
+20-Mar-2025 10:56:40.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert
+20-Mar-2025 10:56:40.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\temp
+20-Mar-2025 10:56:40.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\logging.properties
+20-Mar-2025 10:56:40.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Mar-2025 10:56:40.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.2.2\lib\idea_rt.jar=55132:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.2.2\bin
+20-Mar-2025 10:56:40.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+20-Mar-2025 10:56:40.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+20-Mar-2025 10:56:40.893 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+20-Mar-2025 10:56:40.901 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-23\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\krr.salmane\AppData\Local\Microsoft\WindowsApps;C:\Users\krr.salmane\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.1\bin;;.]
+20-Mar-2025 10:56:41.265 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:56:41.291 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [621] milliseconds
+20-Mar-2025 10:56:41.394 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+20-Mar-2025 10:56:41.394 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.36]
+20-Mar-2025 10:56:41.407 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\Catalina\localhost\ConstractorXpert.xml]
+20-Mar-2025 10:56:42.667 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Mar-2025 10:56:42.749 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\krr.salmane\IdeaProjects\ConstractorXpert\conf\Catalina\localhost\ConstractorXpert.xml] has finished in [1,341] ms
+20-Mar-2025 10:56:42.752 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 10:56:42.775 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1479] milliseconds
+20-Mar-2025 11:11:50.317 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 11:11:50.324 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+20-Mar-2025 11:11:50.332 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ConstractorXpert] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+20-Mar-2025 11:11:50.332 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ConstractorXpert] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.338 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 11:11:50.357 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.358 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.358 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.358 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.361 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+20-Mar-2025 11:11:50.362 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.362 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.363 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+20-Mar-2025 11:11:50.363 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1394)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:985)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
