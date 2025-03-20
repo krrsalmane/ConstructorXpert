@@ -65,5 +65,16 @@ public class RessourceDAO {
         }
     }
 
-
+    // Delete a resource
+    public void deleteRessource(int id) {
+        String sql = "DELETE FROM ressource WHERE id = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            System.out.println("Resource deleted with ID: " + id);
+        } catch (Exception e) {
+            System.out.println("Error deleting resource: " + e.getMessage());
+        }
+    }
 }
