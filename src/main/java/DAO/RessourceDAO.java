@@ -48,5 +48,22 @@ public class RessourceDAO {
         return ressources;
     }
 
+    // Update a resource
+    public void updateRessource(Ressource ressource) {
+        String sql = "UPDATE ressource SET nom = ?, type = ?, quantite = ?, info_fournisseur = ? WHERE id = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, ressource.getNom());
+            stmt.setString(2, ressource.getType());
+            stmt.setInt(3, ressource.getQuantite());
+            stmt.setString(4, ressource.getInfoFournisseur());
+            stmt.setInt(5, ressource.getId());
+            stmt.executeUpdate();
+            System.out.println("Resource updated: " + ressource.getNom());
+        } catch (Exception e) {
+            System.out.println("Error updating resource: " + e.getMessage());
+        }
+    }
+
 
 }
