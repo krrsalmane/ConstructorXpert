@@ -8,10 +8,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
 
 @WebServlet("/ressource")
@@ -24,79 +24,69 @@ public class RessourceServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        String idStr = request.getParameter("id");
+        String taskId = request.getParameter("taskId");
 
-        if ("edit".equals(action) && idStr != null) {
-            try {
-                int id = Integer.parseInt(idStr);
-                Ressource ressourceToEdit = getRessourceById(id); // Helper method
-                request.setAttribute("ressourceToEdit", ressourceToEdit);
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid resource ID for edit: " + idStr);
+        if ("new".equals(action)) {
+            request.getRequestDispatcher("/CreateResource.jsp").forward(request, response);
+        } else if ("delete".equals(action)) {
+            int id = Integer.parseInt(request.getParameter("id"));
+            ressourceDAO.deleteRessource(id);
+            response.sendRedirect("ressource?taskId=" + taskId);
+        } else {
+            // Fetch resources for the specific task
+            List<Ressource> ressources = ressourceDAO.getRessourcesByTaskId(Integer.parseInt(taskId));
+            request.setAttribute("ressources", ressources);
+            request.setAttribute("taskId", taskId);
+            // Fetch projetId for the "Back to Tasks" link (optional, if needed)
+            try (Connection conn = DBConnection.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement("SELECT projet_id FROM tache WHERE id = ?")) {
+                stmt.setInt(1, Integer.parseInt(taskId));
+                try (java.sql.ResultSet rs = stmt.executeQuery()) {
+                    if (rs.next()) {
+                        request.setAttribute("projetId", rs.getInt("projet_id"));
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } else if ("delete".equals(action) && idStr != null) {
-            try {
-                int id = Integer.parseInt(idStr);
-                ressourceDAO.deleteRessource(id);
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid resource ID for delete: " + idStr);
-            }
+            request.getRequestDispatcher("/ResourceList.jsp").forward(request, response);
         }
-
-        List<Ressource> ressources = ressourceDAO.getAllRessources();
-        request.setAttribute("ressources", ressources);
-        request.getRequestDispatcher("resourceList.jsp").forward(request, response);
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        String nom = request.getParameter("nom");
-        String type = request.getParameter("type");
-        String quantiteStr = request.getParameter("quantite");
-        String infoFournisseur = request.getParameter("infoFournisseur");
-        String idStr = request.getParameter("id");
+        if ("add".equals(action)) {
+            String nom = request.getParameter("nom");
+            String type = request.getParameter("type");
+            int quantite = Integer.parseInt(request.getParameter("quantite"));
+            String infoFournisseur = request.getParameter("infoFournisseur");
+            int taskId = Integer.parseInt(request.getParameter("taskId"));
+            int quantiteAssignee = Integer.parseInt(request.getParameter("quantiteAssignee"));
 
-        try {
-            int quantite = Integer.parseInt(quantiteStr);
-            if ("add".equals(action)) {
-                Ressource ressource = new Ressource(0, nom, type, quantite, infoFournisseur);
-                ressourceDAO.addRessource(ressource);
-            } else if ("update".equals(action) && idStr != null) {
-                int id = Integer.parseInt(idStr);
-                Ressource ressource = new Ressource(id, nom, type, quantite, infoFournisseur);
-                ressourceDAO.updateRessource(ressource);
-            }
-            response.sendRedirect("ressource");
-        } catch (Exception e) {
-            System.out.println("Error processing resource: " + e.getMessage());
-            response.sendRedirect("ressource");
-        }
-    }
+            // Add resource to ressource table
+            Ressource ressource = new Ressource(0, nom, type, quantite, infoFournisseur);
+            int newResourceId = ressourceDAO.addRessource(ressource);
 
-    // Helper method to get a resource by ID
-    private Ressource getRessourceById(int id) {
-        String sql = "SELECT * FROM ressource WHERE id = ?";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, id);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                Ressource ressource = new Ressource();
-                ressource.setId(rs.getInt("id"));
-                ressource.setNom(rs.getString("nom"));
-                ressource.setType(rs.getString("type"));
-                ressource.setQuantite(rs.getInt("quantite"));
-                ressource.setInfoFournisseur(rs.getString("info_fournisseur"));
-                return ressource;
+            // Link resource to task in tache_ressource
+            try (Connection conn = DBConnection.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(
+                         "INSERT INTO tache_ressource (tache_id, ressource_id, quantite_assignee) VALUES (?, ?, ?)")) {
+                stmt.setInt(1, taskId);
+                stmt.setInt(2, newResourceId);
+                stmt.setInt(3, quantiteAssignee);
+                stmt.executeUpdate();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            System.out.println("Error fetching resource by ID: " + e.getMessage());
+
+            // Update available quantity
+            ressourceDAO.updateQuantity(newResourceId, -quantiteAssignee);
+
+            // Redirect back to Listresource.jsp
+            response.sendRedirect("ressource?taskId=" + taskId + "&newResourceId=" + newResourceId);
         }
-        return null;
     }
 }

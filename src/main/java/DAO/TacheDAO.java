@@ -76,4 +76,18 @@ public class TacheDAO {
             System.out.println("Error deleting task: " + e.getMessage());
         }
     }
+
+    public void addResourceToTask(int taskId, int resourceId, int quantity) {
+        String sql = "INSERT INTO tache_ressource (taCHE_id, ressource_id, quantite_assignee) VALUES (?, ?, ?)";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, taskId);
+            stmt.setInt(2, resourceId);
+            stmt.setInt(3, quantity);
+            stmt.executeUpdate();
+            System.out.println("Resource " + resourceId + " added to task " + taskId);
+        } catch (Exception e) {
+            System.out.println("Error adding resource to task: " + e.getMessage());
+        }
+    }
 }

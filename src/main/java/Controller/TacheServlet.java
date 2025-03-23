@@ -2,8 +2,10 @@ package Controller;
 
 import DAO.TacheDAO;
 import DAO.ProjetDAO;
+import DAO.RessourceDAO;
 import Model.Tache;
 import Model.Project;
+import Model.Ressource;
 import Util.DBConnection;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -23,11 +25,13 @@ import java.util.List;
 public class TacheServlet extends HttpServlet {
     private TacheDAO tacheDAO;
     private ProjetDAO projetDAO;
+    private RessourceDAO ressourceDAO;
 
     @Override
     public void init() throws ServletException {
         tacheDAO = new TacheDAO();
         projetDAO = new ProjetDAO();
+        ressourceDAO = new RessourceDAO();
     }
 
     @Override
@@ -35,16 +39,26 @@ public class TacheServlet extends HttpServlet {
             throws ServletException, IOException {
         String action = request.getParameter("action");
         String projetIdStr = request.getParameter("projetId");
-        String idStr = request.getParameter("id");
         int projetId = 0;
+
+        if ("new".equals(action)) {
+            List<Project> projets = projetDAO.getAllProjets();
+            request.setAttribute("projets", projets);
+            request.getRequestDispatcher("CreateTask.jsp").forward(request, response);
+            return;
+        }
 
         try {
             projetId = Integer.parseInt(projetIdStr);
+            String idStr = request.getParameter("id");
 
             if ("edit".equals(action) && idStr != null) {
                 int id = Integer.parseInt(idStr);
-                Tache tacheToEdit = getTacheById(id); // Helper method to fetch a single task
+                Tache tacheToEdit = getTacheById(id);
                 request.setAttribute("tacheToEdit", tacheToEdit);
+                request.setAttribute("projetId", projetId);
+                request.getRequestDispatcher("EditTask.jsp").forward(request, response);
+                return;
             } else if ("delete".equals(action) && idStr != null) {
                 int id = Integer.parseInt(idStr);
                 tacheDAO.deleteTache(id);
@@ -55,13 +69,13 @@ public class TacheServlet extends HttpServlet {
             request.setAttribute("taches", taches);
             request.setAttribute("projetId", projetId);
             request.setAttribute("projets", projets);
-            request.getRequestDispatcher("taskList.jsp").forward(request, response);
+            request.getRequestDispatcher("TaskList.jsp").forward(request, response);
         } catch (NumberFormatException e) {
             List<Project> projets = projetDAO.getAllProjets();
             request.setAttribute("projets", projets);
             request.setAttribute("taches", new ArrayList<Tache>());
             request.setAttribute("projetId", null);
-            request.getRequestDispatcher("taskList.jsp").forward(request, response);
+            request.getRequestDispatcher("TaskList.jsp").forward(request, response);
         }
     }
 
@@ -69,6 +83,38 @@ public class TacheServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getParameter("action");
+
+        if ("addResourceForProject".equals(action)) {
+            try {
+                String nom = request.getParameter("nom");
+                String type = request.getParameter("type");
+                int quantite = Integer.parseInt(request.getParameter("quantite"));
+                String infoFournisseur = request.getParameter("infoFournisseur");
+                int taskId = Integer.parseInt(request.getParameter("taskId")); // Changed from projetId
+                int quantiteAssignee = Integer.parseInt(request.getParameter("quantiteAssignee")); // Add this if needed
+
+                Ressource ressource = new Ressource(0, nom, type, quantite, infoFournisseur);
+                int resourceId = ressourceDAO.addRessource(ressource);
+                try (Connection conn = DBConnection.getConnection();
+                     PreparedStatement stmt = conn.prepareStatement(
+                             "INSERT INTO tache_ressource (tache_id, ressource_id, quantite_assignee) VALUES (?, ?, ?)")) {
+                    stmt.setInt(1, taskId);
+                    stmt.setInt(2, resourceId);
+                    stmt.setInt(3, quantiteAssignee);
+                    stmt.executeUpdate();
+                } catch (Exception e) {
+                    System.out.println("Error linking resource to task: " + e.getMessage());
+                }
+                ressourceDAO.updateQuantity(resourceId, -quantiteAssignee);
+
+                response.sendRedirect("ressource?taskId=" + taskId + "&newResourceId=" + resourceId);
+            } catch (Exception e) {
+                System.out.println("Error adding resource for task: " + e.getMessage());
+                response.sendRedirect("ressource?taskId=" + request.getParameter("taskId"));
+            }
+            return;
+        }
+
         String projectIdStr = request.getParameter("project_id");
         String description = request.getParameter("description");
         String dateDebutStr = request.getParameter("dateDebut");
@@ -97,7 +143,6 @@ public class TacheServlet extends HttpServlet {
         }
     }
 
-    // Helper method to get a task by ID
     private Tache getTacheById(int id) {
         String sql = "SELECT * FROM tache WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();

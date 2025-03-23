@@ -34,8 +34,14 @@ public class ProjetServlet extends HttpServlet {
         if ("edit".equals(action) && idStr != null) {
             try {
                 int id = Integer.parseInt(idStr);
-                Project projetToEdit = getProjetById(id); // Fetch project to edit
-                request.setAttribute("projetToEdit", projetToEdit);
+                Project projetToEdit = getProjetById(id);
+                if (projetToEdit != null) {
+                    request.setAttribute("projetToEdit", projetToEdit);
+                    request.getRequestDispatcher("EditProject.jsp").forward(request, response);
+                    return; // Exit after forwarding to edit page
+                } else {
+                    System.out.println("Project not found for ID: " + id);
+                }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid project ID for edit: " + idStr);
             }
@@ -50,7 +56,7 @@ public class ProjetServlet extends HttpServlet {
 
         List<Project> projets = projetDAO.getAllProjets();
         request.setAttribute("projets", projets);
-        request.getRequestDispatcher("projectList.jsp").forward(request, response);
+        request.getRequestDispatcher("ProjectList.jsp").forward(request, response);
     }
 
     @Override
