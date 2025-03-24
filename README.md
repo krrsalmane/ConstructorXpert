@@ -53,11 +53,11 @@ L’application offre une interface **conviviale et responsive**, avec des fonct
 Voici les diagrammes illustrant les aspects clés de **ConstructionXpert Services** :
 
 1. **Diagram de classe**
-    - [![Capture d'écran 2025-03-22 221044.png](../../OneDrive/Pictures/Screenshots/Capture%20d%27%C3%A9cran%202025-03-22%20221044.png)Insérez ici le lien ou l'image de l'architecture]
+    - [![![Capture d'écran 2025-03-22 220919.png](UML%20Diagrams/Capture%20d%27%C3%A9cran%202025-03-22%20220919.png)Capture d'écran 2025-03-22 221044.png]]
 
 
 2. **Diagram de sequence**
-    - [![Capture d'écran 2025-03-22 220948.png](../../OneDrive/Pictures/Screenshots/Capture%20d%27%C3%A9cran%202025-03-22%20220948.png)Insérez ici le lien ou l'image du workflow]
+    - [!(../../OneDrive/Pictures/Screenshots/Capture%20d%27%C3%A9cran%202025-03-22%20220948.png)Insérez ici le lien ou l'image du workflow]
 
 
 3. **Diagram use case**
